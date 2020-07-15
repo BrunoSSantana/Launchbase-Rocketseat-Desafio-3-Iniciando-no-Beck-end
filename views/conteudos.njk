@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+
+
+{%block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Conteudos</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="bootcamps">
+        
+        {% for card in cards %}
+            <div class="bootcamp" id="{{card.id}}">
+                <span>{{card.number}}</span>
+                <img src="{{card.src}}" alt="Logo {{card.id}}">
+                <p>
+                    <strong>{{card.strong}}</strong>
+                    {{card.text}}
+                </p>
+            </div>
+        {% endfor %}
+
+        <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--->
+
+        <div class="modal-overlay ">
+            <div class="modal ">
+                <div class="modal-iframe">
+                    <iframe src="" frameborder="0"></iframe>
+
+                    <a class="maximize">
+                        <i class="material-icons">
+                        open_in_full
+                        </i>
+                    </a>
+                
+
+                    <a class="close-modal">
+                        <i class="material-icons">
+                        close
+                        </i>
+                    </a>
+
+                </div>               
+
+            </div>
+        </div>
+            
+    </div>
+    <script src="script.js"></script>
+{% endblock %}
