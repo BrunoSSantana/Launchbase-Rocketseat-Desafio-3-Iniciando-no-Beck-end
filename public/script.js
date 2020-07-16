@@ -6,15 +6,17 @@ const modal = document.querySelector('.modal')
 const maximize = document.querySelector('.maximize')
 
 
+
+
 for ( let card of cards) {
     card.addEventListener("click", function () {
         const bootcamp = card.getAttribute("id")
-        modalOverlay.classList.add('active')
-        modalOverlay.querySelector("iframe").src = `https://rocketseat.com.br/${bootcamp}`
+        window.location.href = `/conteudos/${bootcamp}`
+        console.log("OPA")
     })
 }
 
-document.querySelector('.close-modal').addEventListener('click', function () {
+/* document.querySelector('.close-modal').addEventListener('click', function () {
     modalOverlay.classList.remove('active')
     modal.classList.remove('maximize')
 })
@@ -25,4 +27,4 @@ maximize.addEventListener('click', function () {
     } else {
         modal.classList.add('maximize')
     }
-})
+}) */
