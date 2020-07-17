@@ -15,7 +15,6 @@ body {
     background-size: 255px;
     background-position: bottom 5px left 20px;
     background-color: #282a36;
-    
 }
 
 section h1 {
@@ -213,38 +212,23 @@ footer {
 }
 
 /* === MODAl === */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 0;
-    visibility: hidden;
-}
-
  .modal {
-    width: 50%;
-    height: 60%;
-    background-color: rgba(77, 77, 77, 0.808);
+    width: 70%;
+    height: 70%;
+    background-color: rgba(77, 77, 77, 0);
 
     position: relative;
     display: flex;
+    margin: 5vh auto;
+    
 }
 
-.modal.maximize {
+/* .modal.maximize {
     width: 100vw;
     height: 100vh;
     position: fixed;
     left: 0;
-}
-
+} */
 
 .modal .close-modal {
     color: black;
@@ -252,6 +236,7 @@ footer {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    display: none;
 }
 
 .modal .maximize {
@@ -260,14 +245,15 @@ footer {
     bottom: 10px;
     right: 10px;
     cursor: pointer;
+    display: none;
 }
 
 /* === MODAL ACTIVE */
 
-.modal-overlay.active {
+/* .modal-overlay.active {
     opacity: 1;
     visibility: visible;
-}
+} */
 
 /* iframe */
 
@@ -277,4 +263,5 @@ iframe {
     position: absolute;
     top: 10%;
     background-color: #fff;
+    overflow-y: hidden;
 }

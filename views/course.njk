@@ -6,10 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="modal-overlay active">
+    
         <div class="modal ">
             <div class="modal-iframe">
-                <iframe src="https://rocketseat.com.br/{{card.id}}" frameborder="0"></iframe>
+                <iframe src="https://rocketseat.com.br/{{card.id}}" scrolling="auto" frameborder="0"></iframe>
 
                 <a class="maximize">
                     <i class="material-icons">
@@ -27,7 +27,6 @@
             </div>               
 
         </div>
-    </div>
         
     <script src="/script.js"></script>
 {% endblock %}
