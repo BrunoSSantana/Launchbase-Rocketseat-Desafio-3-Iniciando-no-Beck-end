@@ -1,6 +1,5 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
-
 const server = express()
 const cards = require("./data")
 
@@ -13,7 +12,6 @@ nunjucks.configure("views", {
     autoescape: false,
     noCache: true
 })
-
 //Servindo
 
 server.get("/", function(req, res) {
@@ -33,8 +31,6 @@ server.get("/conteudos/:id", function(req, res) {
         }
     })
 
-    
-
     return res.render("course", { card })
   
 });
@@ -46,11 +42,7 @@ server.get("/sobre", function(req, res) {
 server.use(function(req, res) {
     res.status(404).render("not-found");
   });
-
-
-
 /* ====================================== */
-
 server.listen(5000, function() {
     console.log("server is runing")
 })
